@@ -1,0 +1,82 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadPartial")
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        @await Component.InvokeAsync("_SpinnerPartial")
+
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+
+
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="/Layout/_Layout" class="nav-item nav-link ">Ana Sayfa</a>
+                        <a href="/About/Index" class="nav-item nav-link active ">Hakkımızda</a>
+                        <a href="/Menu/Index" class="nav-item nav-link  ">Menü</a>
+                        <a href="/Service/Index" class="nav-item nav-link  ">Hizmetlerimiz</a>
+                        <a href="/Team/Index" class="nav-item nav-link ">Çalışanlar</a>
+                        <a href="/Testimonial/Index" class="nav-item nav-link  ">Yorumlar</a>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+            </nav>
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Hakkımızda</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Ana Sayfa</a></li>
+                       
+                            <li class="breadcrumb-item text-white active" aria-current="page">Hakkımızda</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Service Start -->
+        <!-- Service End -->
+        <!-- About Start -->
+        <!-- About End -->
+        <!-- Menu Start -->
+        @await Component.InvokeAsync("AboutPartial")
+        <!-- Menu End -->
+        <!-- Team Start -->
+        <!-- Team End -->
+        <!-- Testimonial Start -->
+        <!-- Testimonial End -->
+        <!-- Footer Start -->
+        @await Component.InvokeAsync("FooterPartial")
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+    @await Component.InvokeAsync("ScriptPartial")
+    <!-- JavaScript Libraries -->
+
+</body>
+
+</html>

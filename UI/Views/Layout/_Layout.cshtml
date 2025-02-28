@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadPartial")
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        @await Component.InvokeAsync("_SpinnerPartial")
+
+        @await Component.InvokeAsync("NavbarPartial")
+        <!-- Service Start -->
+        @await Component.InvokeAsync("ServicePartial")
+        <!-- Service End -->
+        <!-- About Start -->
+        @await Component.InvokeAsync("AboutPartial")
+        <!-- About End -->
+        <!-- Menu Start -->
+        @await Component.InvokeAsync("MenüPartial")
+        <!-- Menu End -->
+       
+        <!-- Team Start -->
+        @await Component.InvokeAsync("TeamPartial")
+        <!-- Team End -->
+        <!-- Testimonial Start -->
+        @await Component.InvokeAsync("TestimonialPartial")
+        <!-- Testimonial End -->
+        <!-- Footer Start -->
+        @await Component.InvokeAsync("FooterPartial")
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+    @await Component.InvokeAsync("ScriptPartial")
+    <!-- JavaScript Libraries -->
+   
+</body>
+
+</html>
